@@ -1,0 +1,386 @@
+.header {
+    background-color: $primary-color-2;     
+}
+.navbar {
+    @include flex-display(row);
+    padding: 2.4rem;
+    @include min-width(61rem) {
+        padding: 5rem 8rem;
+    }
+}
+
+.logo-img {    
+    height: 2.4rem;
+    @include min-width(61rem) {
+        height: 5.2rem;
+    }
+}
+.nav-links {
+    flex: 1;
+    @include flex-display(row, 2.4rem);
+    @include flex-position(flex-end, center);
+    @include min-width(61rem) {
+        @include flex-display(row, 5.7rem);
+    }
+}
+.intro-section {
+    text-align: center;
+    padding: 4.8rem 0.4rem;
+    background-image: url(../images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;    
+    background-position: 100% 100%;
+    background-color: $primary-color-2;   
+    background-size: contain;
+    @include min-width(61rem){
+        background-image: url(../images/bg-curvy-desktop.svg);
+        
+    }
+}
+
+.intro-img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 3.3rem;
+}
+.intro-text-box {
+    @include min-width(37rem) {
+        max-width: 60vw;
+        margin: 0 auto;
+    }
+    @include min-width(61rem) {
+        max-width: 54vw;
+    }
+}
+.intro-heading {
+   margin-bottom: 1.5rem;
+}
+.intro-text {
+    margin-bottom: 3.2rem;
+    @include min-width(61rem) {
+        font-size: 2rem;
+        padding: 0 4rem;
+    }
+}
+
+.btn {
+    font-size: 1.4rem;
+    padding: 1.6rem 8.1rem;
+    border-radius: 2.5rem;
+    border: 1px solid transparent;
+    color: $color-white;
+    background: linear-gradient(to bottom right, $color-cyan, $color-blue);
+    @include min-width(61rem) {
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: $color-light-cyan;
+    }
+}
+
+.section-features {
+    text-align: center;
+    margin-bottom: 8rem;
+    @include grid-display(8rem);
+    @include grid-position(center, center);
+    @include min-width(37rem) {
+        grid-template-columns: 40rem;
+        justify-content: center;
+        align-content: center;
+        max-width: 70vw;
+        margin: 0 auto; 
+    }
+    @include min-width(61rem) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12rem;
+        max-width: 70vw;
+        margin: 0 auto;        
+    }
+    
+}
+.icon-img {
+    height: 6.4rem;
+    max-width: 100%;
+    margin-bottom: 2.4rem;
+}
+
+.feature-heading {    
+    margin-bottom: 0.8rem;
+}
+.working-section {
+    padding: 8rem 0;
+    @include min-width(37rem) {
+        padding: 6rem;
+    }
+    @include min-width(61rem) {
+        @include flex-display(row, 5rem);
+        // padding: 8rem;
+        padding: 0;
+    }
+    @include min-width(61rem) {
+        padding: 8rem;
+    }
+}
+.img-box {
+    max-width: 100%;
+}
+.working-img {
+    max-width: 100%;
+    
+    object-fit: cover;
+    margin: 0 auto;
+    margin-bottom: 4.8rem;
+    display: block;
+    @include min-width(37rem) {
+        width: 44rem;
+    }
+    @include min-width(61rem) {
+        margin-bottom: 0;
+    }
+    @include min-width(75rem) {
+        width: 60rem;
+        margin-bottom: 0;
+    }
+}
+.working-text-box {
+   @include flex-display(column, $gapValue: 1.6rem);
+   @include flex-position(center, flex-start);
+   @include min-width(61rem) {
+       flex-basis: 100%;
+   } 
+}
+.working-heading {
+    @include min-width(61rem) {
+        max-width: 34rem;
+        font-size: 4rem;
+        line-height: 1.2;
+    }
+}
+.working-link { 
+    display: inline-block;
+    color: $color-cyan;
+    border-bottom: 0.1rem solid $color-cyan;
+    padding-bottom: 0.5rem;
+}
+
+.section-testimonials {
+    padding: 8rem 2rem;
+    @include flex-display(column, 2.4rem);
+    @include min-width(37rem) {
+        @include flex-display(row, 1.2rem);        
+    }
+    @include min-width(61rem) {
+        @include flex-display(row, 3.2rem);
+        padding: 8rem;
+    }
+}
+.first-testimonial {
+    position: relative;
+}
+.quote-img {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    height: 2.4rem;
+    z-index: -1;
+}
+.testimonial {
+    background: $primary-color-3;
+    border: 1px solid $primary-color-3;
+    border-radius: 0.5rem;
+    padding: 2.4rem 2rem;
+
+    p {
+        margin-bottom: 1.7rem;
+    }
+}
+.profile-info {
+    @include flex-display(row, 1rem);
+    @include flex-position($column: center);
+}
+.profile-img {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+}
+.profile {
+    @include flex-display(column);
+    span {
+        font-weight: 700;
+    }
+}
+.section-subscription {
+    position: relative;
+    bottom: -20rem;
+    text-align: center;
+    background: $primary-color-2;
+    border: 1px solid $primary-color-2;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    padding: 4rem 2.8rem 3.7rem 2.8rem;
+
+    h3 {
+        margin-bottom: 1.6rem;
+    }
+    p {
+        margin-bottom: 3.2rem;
+    }
+    @include min-width(37rem) {
+        max-width: 60vw;
+        margin: 0 auto;
+        h3 {
+            font-size: 2.4rem;
+        }
+    }
+    @include min-width(61rem) {
+        padding: 4.2rem 7rem;
+
+        h3 {
+            font-size: 3.2rem;
+        }
+    }
+
+}
+
+.subscribe {
+    @include min-width(61rem) {
+        @include flex-display(row, 2rem);
+    }
+}
+.input-control {
+    width: 100%;
+    @include flex-display(column);
+    @include flex-position(center, flex-start);
+    margin-bottom: 2.4rem;
+}
+.error-meassage {
+    color: $color-red;
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+    display: none;
+}
+input, .btn {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 2.5rem;
+    
+}
+input {
+    &::placeholder {
+        color: hsla(0, 0%, 75%, 1);
+        font-size: 1.2rem;
+    }
+
+    @include min-width(61rem) {
+        input {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.btn {
+    @include min-width(61rem) {
+        width: 40rem;
+    }
+}
+ 
+
+footer {
+    padding: 30rem 2.8rem 6rem 2.8rem;
+    background: $primary-color-4;
+
+    .logo-img {
+        height: 3rem;
+        margin-bottom: 3.5rem;
+        padding-left: 1rem;
+    }
+    @include min-width(61rem) {
+        @include grid-display(2rem);
+        @include grid-position(center, start);
+        grid-template-columns: 40rem repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        padding: 30rem 4.8rem 6rem 4.8rem;
+        .logo-img {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            justify-self: start;
+        }
+    }
+
+}
+
+.location-info {
+    margin-bottom: 1.6rem;
+    
+}
+.location {
+    @include flex-display(row, 1.6rem);
+    align-items: flex-start;
+    
+    p {
+        font-size: 1.6rem;
+        align-self: flex-start;
+    }
+}
+.icon {
+    display: block;
+    padding-top: 0.5rem;
+}
+.contact-info {
+    margin-bottom: 5.6rem;
+}
+
+.phone, .email {
+    @include flex-display(row, 1.6rem);
+    @include flex-position(flex-start, center);
+}
+.phone {
+    margin-bottom: 1.9rem;
+    img {
+        height: 1.4rem;
+    }
+}
+.email {
+    img {
+        height: 1.4rem;
+    }
+}
+
+.about, .contact {
+    font-size: 1.6rem;
+    @include flex-display(column, 1.6rem);
+}
+.about {
+    margin-bottom: 4.8rem;
+}
+.contact {
+    margin-bottom: 5.6rem;
+}
+.social-links {
+    @include flex-display(row, 1.1rem);
+    @include flex-position(center, center);
+    li {
+        height: 3.4rem;
+        width: 3.4rem;
+        border-radius: 50%;
+        border: 1px solid $color-white;
+        @include flex-display(row);
+        @include flex-position(center, center);
+
+        &:hover {
+            cursor: pointer;            
+            border-color: $color-cyan;
+            .social-link {
+                color: $color-cyan;
+            }
+        }
+    }
+
+    @include min-width(61rem) {
+        align-self: start;
+    }
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Raleway:wght@400;700&display=swap');
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Raleway', sans-serif;
+
+$primary-color-1: hsl(218, 28%, 13%);
+$primary-color-2: hsl(217, 28%, 15%);
+$primary-color-3: hsl(219, 30%, 18%);
+$primary-color-4: hsl(216, 53%, 9%);
+
+$color-cyan: hsl(176, 68%, 64%);
+$color-light-cyan: hsl(186, 62%, 72%);
+$color-blue: hsl(198, 60%, 50%);
+$color-red: hsl(0, 100%, 63%);
+$color-white: hsl(0, 0%, 100%);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: $primary-font;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    
+    // background-size: 50% 50%;
+    background-color: $primary-color-1;
+    color: $color-white;
+    z-index: 100;
+    position: relative;
+
+    @include min-width(61rem) {
+        font-size: 1.6rem;
+    }
+    
+}
+.container {
+
+    padding: 2.4rem;
+    padding-top: 6rem;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $color-white;
+}
+p {
+    color:hsla(0, 0%, 100%, 0.8);
+}
+
+h1,h2, h3 {
+    font-family: $secondary-font;    
+    font-weight: 700;
+}
+h1 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+@include min-width(61rem) {
+    h1 {
+        font-size: 4rem;
+    }
+    
+}
